@@ -257,7 +257,7 @@ class FilmlisteParser extends AbstractParser
 				$film['Dauer'] = $dauer;
 
 				// Alte Sendungen ignorieren
-				if ((time() - $film['timestamp']) > (3600 * 24 * 30)) {
+				if ((time() - $film['timestamp']) < (3600 * 24 * 30)) {
 					$this->liste[] = $film;
 				}
 
